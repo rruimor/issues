@@ -7,13 +7,13 @@ defmodule Issues.CLI do
   @moduledoc """
   Handle the command line parsing and the dispatch to
   the various functions that end up generating a
-  table of the las _n_ issues in a github project
+  table of the last _n_ issues in a github project
   """
 
-  def run(argv) do
+  def main(argv) do
     argv
-    |>parse_args
-    |>process
+    |> parse_args
+    |> process
   end
 
   def process(:help) do
@@ -36,10 +36,10 @@ defmodule Issues.CLI do
       fn i1, i2 -> Map.get(i1, "created_at") <= Map.get(i2, "created_at") end
   end
 
-  def decode_response({:ok,body}), do: body
+  def decode_response({:ok, body}), do: body
 
-  def decode_response({:error,error}) do
-    {_, message} = List.keyfind(error, "message", 0)
+  def decode_response({:error, error}) do
+    {_, message} = List.keyfind(Enum.to_list(error), "message", 0)
     IO.puts "Error fetching from Github: #{message}"
     System.halt(2)
   end

@@ -1,6 +1,16 @@
 # Issues
 
-**TODO: Add description**
+An [Github Issues](https://help.github.com/articles/about-issues/) API wrapper written in Elixir.
+
+This a sample project from the book [Programming in Elixir 1.3](https://pragprog.com/book/elixir13/programming-elixir-1-3), by [Dave Thomas](https://github.com/pragdave).
+
+## Usage
+
+`$ issues <github user> <github project> [number of issues (default to 4)]`
+
+Example:
+
+`$ issues elixir-lang elixir 2`
 
 ## Installation
 
@@ -16,4 +26,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/issues](https://hexdocs.pm/issues).
-

@@ -1,18 +1,5 @@
 defmodule Issues do
   @moduledoc """
-  Documentation for Issues.
+  Parent module for the Github's Issues fetcher.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Issues.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
